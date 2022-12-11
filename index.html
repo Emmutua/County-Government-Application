@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bursary application system</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Home -->
+    <header id="Home">
+            <div class = "top">
+                <div class="top-left">
+                    <a href="#Home">Home</a>
+                </div>
+                <div class="top-right">
+                    <a href="#AboutUs">About Us</a>
+                    <a href="#Gallery">Gallery</a>
+                    <a href="#Faqs">FAQS</a>
+                    <a href="#ContactUs">Contact Us</a>
+                    <button onclick="document.
+            getElementById('id01').style.display='block'"
+            style="width:auto; font-size: 30px;">Login</button>
+            <a href="./register.html" id="id02">Register</a>
+                </div>
+            </div>
+    </header>
+<!-- login -->
+<div id="id01" class="modal">
+
+<form class="modal-content animate"
+action="login.php">
+<div class="imgcontainer">
+<span onclick="document
+.getElementById('id01')
+
+.style.display='none'"
+class="close" title="Close Modal">
+    &times;</span>
+
+ <img src="profile.jpg"
+ alt="Avatar"
+ class="avatar">
+    </div>
+
+
+ <div class="container">
+  <label><b>ID Number</b></label> <br>
+  <input type="number" placeholder=
+  "Enter ID Number"
+  name="ID" required>
+
+ <br>
+<label><b>Password </b></label>
+<input type="password" placeholder=
+"Enter Password" name="psw" required>
+
+
+<button type="submit">Login</button>
+<p>No Account? <a href="./register.html">Register</a></p>
+<input type="checkbox"
+checked="checked">
+Remember me
+</div>
+
+
+ <div class="container"
+ style="background-color:#f1f1f1">
+ <button type="button"
+ onclick="document.getElementById
+ ('id01').style.
+
+ display='none'" class="cancelbtn">
+ Cancel</button>
+ <span class="psw">Forgot
+ <a href="#">password?
+
+ </a></span>
+  </div>
+  </form>
+
+  <!-- Register -->
+</div>
+
+    <main>
+        <div id="Home" class="Home">
+            <div class="tapply hm">
+        <h1>How to apply?</h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque tempora ipsam similique
+             reprehenderit consequatur iste commodi eius et dignissimos quos.</p>
+             <a href="./login.html">Login to Apply</a>
+             <marquee behavior="scroll" direction="left" style="color: orange;">Application Closed, Subscribe for Updates: Application Closed, Subscribe for Updates:</marquee>
+            </div>
+            <div class="benef hm">
+                <h1>Beneficiaries</h1>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque tempora ipsam similique
+                     reprehenderit consequatur iste commodi eius et dignissimos quos.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora recusandae veritatis quasi
+                     dolor sequi nemo ratione similique ex corrupti eaque.</p>
+            </div>
+            <div class="cfab hm">
+                <h1>Creteria for awarding Bursaries</h1>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque tempora ipsam similique
+                     reprehenderit consequatur iste commodi eius et dignissimos quos.</p>
+            </div>
+        </div>
+        <!-- about us -->
+    </main>
+    <section>
+        <div id="AboutUs" class="AboutUs">
+            
+                <div class="hm" id="AboutUs" style="margin-top: 50px;">
+                    <h2 style="color: white;">We are a ...</h2><br>
+                    </div>
+            <div class="vision abt">
+                <h1>OUR VISION</h1>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque tempora ipsam similique
+                     reprehenderit consequatur iste commodi eius et dignissimos quos.</p>
+                    </div>
+                    <div class="mission abt">
+                        <h1>OUR MISSION</h1>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque tempora ipsam similique
+                             reprehenderit consequatur iste commodi eius et dignissimos quos.
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora recusandae veritatis quasi
+                             dolor sequi nemo ratione similique ex corrupti eaque.</p>
+                    </div>
+                    <div class="Cvalues abt">
+                        <h1>Core Values</h1>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque tempora ipsam similique
+                             reprehenderit consequatur iste commodi eius et dignissimos quos.</p>
+                    </div>
+                    <div class="Gallery abt" id="Gallery" style="height: 100vh; color: white;">
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellat soluta omnis aliquid commodi rerum 
+                            dicta nemo suscipit, cum aut necessitatibus voluptatem, illo pariatur autem ea impedit doloremque? Iste,
+                             dignissimos voluptatibus.</p>
+                            </div>
+                            <div class="img">
+                                <img src="./Images/burs.jpg" alt="">
+                            </div>
+                           
+        </div>
+    </section>
+
+    <!-- Gallery -->
+
+</body>
+</html>
