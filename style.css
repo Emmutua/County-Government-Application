@@ -3,7 +3,13 @@
     background-color: rgba(0, 0, 21, 1);
     
 }
-
+*{
+    scroll-behavior: smooth;
+}
+.main{
+    display: flex;
+    flex-direction: column;
+}
 .top{
     background-color: rgb(41, 168, 190);
     height: 4rem;
@@ -79,8 +85,8 @@
 /* Styling About Us */
 .AboutUs{
  /* background-color: rgb(244, 246, 248); */
-    height: 100vh;
-    background-size: cover;
+    height: auto;
+    /* background-size: cover; */
     display: flex;
     flex-direction: column;
     align-items: center; 
@@ -100,8 +106,21 @@
 .abt>p{
     color: white;
 }
-.img{
+.Gallery{
+    /* margin-top: 1%;
   align-items: center;
+
+  */
+
+  height: 100vh; 
+  width: auto;
+
+}
+.Gallery>h1{
+    margin-top: 100px;
+}
+.Faqs{
+   width: auto;
 }
 
 /* login style */
@@ -142,6 +161,7 @@ img.avatar {
 .container {
     padding: 16px;
 }
+
 
 span.psw {
     float: right;
@@ -229,4 +249,14 @@ button on extra small screens */
     .cancelbtn {
        width: 100%;
     }
+}
+.footer{
+    display: flex;
+    flex-direction:row ;
+}
+.Faqs{
+    height: 100vh;
+}
+.Faqs>h1{
+    margin-top: 100px;
 }
