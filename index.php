@@ -14,6 +14,9 @@
                 <div class="top-left">
                     <a href="#Home">Home</a>
                 </div>
+             <?php
+include("login.php")
+             ?>
                 <div class="top-right">
                     <a href="#AboutUs">About Us</a>
                     <a href="#Gallery">Gallery</a>
@@ -27,65 +30,13 @@
             </div>
     </header>
 <!-- login -->
-<div id="id01" class="modal">
 
-<form class="modal-content animate"
-action="login.php">
-<div class="imgcontainer">
-<span onclick="document
-.getElementById('id01')
-
-.style.display='none'"
-class="close" title="Close Modal">
-    &times;</span>
-
-    </div>
-
-
- <div class="container">
-  <label><b>UserName</b></label> <br>
-  <input type="text" placeholder=
-  "Enter User Name"
-  name="ID" required>
-
- <br>
-<label><b>Password </b></label>
-<input type="password" placeholder=
-"Enter Password" name="psw" required>
-
-
-<button type="submit">Login</button> <br>
-<p>No Account?   <button onclick="document.
-    getElementById('signup').style.display='block'"
-    style="width:auto; font-size: 20px;">SignUp</button></p>
-<input type="checkbox"
-checked="checked">
-Remember me
-</div>
-
-
- <div class="container"
- style="background-color:#f1f1f1">
- <button type="button"
- onclick="document.getElementById
- ('id01').style.
-
- display='none'" class="cancelbtn">
- Cancel</button>
- <span class="psw">Forgot password?
- <a href="#">Reset
-
- </a></span>
-  </div>
-  </form>
-
-</div>
 <!-- sign up -->
 
 <div id="signup" class="modal">
 
     <form class="modal-content animate"
-    action="login.php">
+    action="loggedin.php">
     <div class="imgcontainer">
     <span onclick="document
     .getElementById('signup')
@@ -101,7 +52,7 @@ Remember me
       <label><b>First Name</b></label> <br>
       <input type="text" placeholder=
       "Enter First Name"
-      name="fname" required>
+      name="fname" id="uname" required>
     <br>
       <label><b>Last Name</b></label> <br>
       <input type="text" placeholder=
@@ -146,7 +97,7 @@ Remember me
              <button onclick="document.
              getElementById('id01').style.display='block'"
              style="width:auto; font-size: 20px;">Login to Apply</button>
-             <marquee behavior="scroll" direction="left" style="color: orange;">Application Closed, Subscribe for Updates: Application Closed, Subscribe for Updates:</marquee>
+             <!-- <marquee behavior="scroll" direction="left" style="color: orange;">Application Closed. Dates will be announced lator: Application Closed. Dates will be announced lator:</marquee> -->
             </div>
             <div class="benef hm">
                 <h1>Beneficiaries</h1>
@@ -166,50 +117,73 @@ Remember me
         <div id="AboutUs" class="AboutUs">
             
                 <div class="hm" style="margin-top: 50px;">
-                    <h2 style="color: white;">We are a ...</h2><br>
+                    <h2 style="color: orange;">About Us</h2>
+                    <h3 style="color: white;">The county government of Elite provides an online platform where students at both the secondary 
+                        and tertiary level can apply for bursaries conveniently. This would oversee a fair allocation and disbursement of county funds. 
+                        This platform is to resolve the issue of students lacking school fees and also enhancing a better environment for learning and 
+                        fostering smooth education. 
+                        The students can access the bursaries online through the website where they are able to apply.</h3><br>
                     </div>
             <div class="vision abt">
                 <h1>OUR VISION</h1>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque tempora ipsam similique
-                     reprehenderit consequatur iste commodi eius et dignissimos quos.</p>
+               <h3 style="color: white;"> To create a better everyday life for many people </h3>
                     </div>
                     <div class="mission abt">
                         <h1>OUR MISSION</h1>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque tempora ipsam similique
-                             reprehenderit consequatur iste commodi eius et dignissimos quos.
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora recusandae veritatis quasi
-                             dolor sequi nemo ratione similique ex corrupti eaque.</p>
+                       <h3 style="color: white;">To spread the power of optimism and bring about transformative leadership and value centered</h3>
                     </div>
                     <div class="Cvalues abt">
                         <h1>Core Values</h1>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque tempora ipsam similique
-                             reprehenderit consequatur iste commodi eius et dignissimos quos.</p>
+                        <ul style="color: white;">
+                            <li>Integrity</li>
+                            <li>Respect</li>
+                            <li>Responsibility</li>
+                            <li>Honesty</li>
+                            <li>Transparency</li>
+                        </ul>
+                      
                     </div>
         </div>
         <br><br>
  <!-- Gallery -->
     <div class="Gallery abt" id="Gallery">
         <h1 style="color: orange;">Gallery</h1>
-        
-        <marquee behavior="scroll" direction="left" scrollamount ="40" style="">
-                <!-- <img src="./Images/burs.jpg" alt="">
-                <img src="./Images/burs.jpg" alt="">   -->
+        <marquee behavior="alternate" direction="left" scrollamount ="4">
+        <img src="./Images/award.jpg" alt="" style="width: auto; height: 390px;">   
+                 <img src="./Images/burs.jpg" alt="">
              
          </marquee>
     </div>
 <!-- FAQS -->
 <div id="Faqs" class="Faqs abt">
     <h1 style="color: orange;">FAQS</h1>
-    <p style="color: white;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum quaerat nisi, doloribus ducimus minus, maiores impedit quidem assumenda totam hic soluta culpa nam illum ratione voluptatum labore iure laborum repudiandae ad eveniet. Laborum tenetur dolores placeat eos?
-         Nobis tempore eum nisi odit eveniet, id eos sapiente possimus. Reiciendis, voluptatem facilis?</p>
+  <h3 style="color: #f1f1f1;">How do you frequent offer bursaries?</h3>
+<p style="color: #f1f1f1;"><i>- We do offer bursaries twice in a year.</i> </p>
+<h3 style="color: #f1f1f1;">Do you offer bursaries for TVET institutions?</h3>
+<p style="color: #f1f1f1;"><i>-TVET bursaries are yet to be included I our platform but for now they are not available.</i></p> </p>
+<h3 style="color: #f1f1f1;">What is the minimum amount that you offer for bursaries?</h3>
+<p style="color: #f1f1f1;"><i>The amount to be allocated to a student sis dependent on the financial position of the student.Basiacally the least one  can secure is 10,000 .<i></p>
 </div>
    
-    <div class="footer" id="ContactUs" style="background-color:  rgb(41, 168, 190); height: 5rem; width: 100%; ">
-        <h1>my contact</h1>
-        <h1>my contact</h1>
-        <h1>my contact</h1>
-        <h1>my contact</h1>
+    <div class="footer" id="ContactUs" style="background-color:  rgb(194, 208, 236); height: 10rem; width: 100%; ">
+       <div class="address ft">
+            <h3>Address</h3>
+            <span>Samik House, Ist Floor, Opp KiraBank</span>
+            <span>PO BOX 90110</span>
+            <span>Nairobi</span>
+       </div>
+       <div class="mobile ft">
+        <h3>Mobile</h3>
+        <span>Tel: 0743411765, 0743477828</span>
+        <span>Email: countyofxyz@email</span>
+       </div>
+       <div class="socialmedia ft">
+<h3>socialmedia</h3>
+<a href="https://wa.me/+254743411856/" target = "_blank"><img src="./Images/image-removebg-preview.png" alt="" style="height: 20px;"></a>
+<a href="https://www.facebook.com/emmanuel.mutua.9889" target = "_blank"><img src="./Images/fb.png" alt="" style="height: 20px;"></a>
+<a href="https://twitter.com/Emmanuel2000CS?ref_src=twsrc%5Etfw" target = "_blank"><img src="./Images/twiitte.png" alt="" style="height: 20px;"></a>
+       </div>
     </div>
-</div>
+</div> 
 </body>
 </html>

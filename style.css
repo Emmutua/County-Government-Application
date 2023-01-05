@@ -58,7 +58,7 @@
     display: flex;
     align-items: center;    
 }
-.top-right>button,a,button {
+.top-right>button,.top-right>a,button {
     background-color:rgb(41, 168, 190);
     color: white;
     padding: 14px 20px;
@@ -260,3 +260,20 @@ button on extra small screens */
 .Faqs>h1{
     margin-top: 100px;
 }
+.footer{
+    justify-content: space-evenly;
+    background-color: rgb(249, 248, 248);
+}
+.ft{
+    place-items: center;
+   justify-content: space-evenly;
+    display: flex;
+    flex-direction: column;
+  }
+    .ft>a{
+        text-decoration: none;
+    }
+    .Gallery>img{
+height: 40%;
+width: auto;
+    }
