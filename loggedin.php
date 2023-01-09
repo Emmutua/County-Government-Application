@@ -131,6 +131,10 @@ button on extra small screens */
 }
 </style>
 <body>
+
+<?php
+ echo '<script> alert("Login successful");</script>';
+?>
 <h2> Apply</h2>
 
 <!-- apply university  -->
@@ -145,7 +149,7 @@ style="width:auto;">Tertiary Institution
 <div id="id02" class="modal">
 
 <form class="modal-content animate"
-action="register.php">
+action="./Insert/tertiary.php">
 <div class="imgcontainer">
 <span onclick="document
 .getElementById('id02')
@@ -160,9 +164,9 @@ class="close" title="Close Modal">
  <div class="container">
     <h2>Personal Details</h2>
   <label><b>ID Number</b></label>
-  <input type="text" placeholder=
+  <input type="number" placeholder=
   "Enter Id Number"
-  name="uname" required>
+  name="idno" required>
 
   <label><b>Enter Your SubCounty</b></label>
   <input type="text" placeholder=
@@ -226,7 +230,7 @@ class="close" title="Close Modal">
 </select>
 <br><br>
 <label><b>Course Duration</b></label>
-<select name="sem" id="sem">
+<select name="courseDuration" id="cd">
     <option value="1">1</option>
     <option value="2">2</option>
     <option value="3">3</option>

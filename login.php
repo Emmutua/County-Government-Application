@@ -8,7 +8,7 @@ include("adminLogin.php")
 <div id="id01" class="modal">
 
 <form class="modal-content animate"
-action="loggedin.php" name = "Asignin" method = "post" id="Asignin">
+action="checklogin.php" name = "login" method = "POST" id="login">
 <div class="imgcontainer">
 <span onclick="document
 .getElementById('id01')
@@ -18,6 +18,7 @@ class="close" title="Close Modal">
     &times;</span>
 
     </div>
+    
 <!-- 
     <button onclick="document.
     getElementById('Asignin').style.display='block'"
@@ -25,15 +26,15 @@ class="close" title="Close Modal">
 
     
  <div class="container">
-  <label><b>UserName</b></label> <br>
-  <input type="text" placeholder=
-  "Enter User Name"
-  name="uname" id="uname" required>
+  <label><b>IdNo</b></label> <br>
+  <input type="number" placeholder=
+  "Enter Id"
+  name="idno" id="idno" required>
 
  <br>
 <label><b>Password </b></label>
 <input type="password" placeholder=
-"Enter Password" name="psw" id="pwd" required>
+"Enter Password" name="pwd" id="pwd" required>
 
 <!-- <button type="submit">SignIn</button> -->
 <input type="submit" name="login">
@@ -63,10 +64,6 @@ Remember me
 
  display='block'">
  Admin</button>
- <span class="psw">Forgot password?
- <a href="#">Reset
-
- </a></span>
   </div>
   </form>
 </div>
@@ -83,7 +80,7 @@ include("adminLoggedin.php")
 <div id="asignin" class="modal">
 
 <form class="modal-content animate"
-action="adminLoggedin.php" name = "Asignin" method = "post" id="Asignin">
+action="adminLoggedin.php" name = "Asignin" method = "POST" id="Asignin">
 <div class="imgcontainer">
 <span onclick="document
 .getElementById('asignin')

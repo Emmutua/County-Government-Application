@@ -36,7 +36,7 @@ include("login.php")
 <div id="signup" class="modal">
 
     <form class="modal-content animate"
-    action="loggedin.php">
+    action="insert.php" method="POST">
     <div class="imgcontainer">
     <span onclick="document
     .getElementById('signup')
@@ -59,22 +59,18 @@ include("login.php")
       "Enter Last Name"
       name="lname" required>
      <br>
-     <label><b>User Name</b></label> <br>
-     <input type="text" placeholder=
-     "Enter User Name"
-     name="uname" required>
+     <label><b>Id No</b></label> <br>
+     <input type="number" placeholder=
+     "Enter Id No"
+     name="idno" required>
     <br>
     <label><b>Password </b></label>
     <br>
     <input type="password" placeholder=
-    "Enter Password" name="psw1" required>
+    "Enter Password" name="pwd" required>
     <br>
-    <label><b>Password </b></label>
     <br>
-    <input type="password" placeholder=
-    "Re-Enter Password" name="psw2" required>
-    <br>
-    <button type="submit">Submit</button>
+  <input type="submit" name="submit" value="submit">    
     </div>
      
      <div class="container"
