@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bursary application system</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+body{
+    background-color: rgba(0, 0, 21, 1);
+}
+    </style>
 </head>
 <body>
     <!-- Home -->
@@ -14,85 +19,29 @@
                 <div class="top-left">
                     <a href="#Home">Home</a>
                 </div>
-             <?php
-include("login.php")
-             ?>
+
                 <div class="top-right">
                     <a href="#AboutUs">About Us</a>
                     <a href="#Gallery">Gallery</a>
                     <a href="#Faqs">FAQS</a>
                     <a href="#ContactUs">Contact Us</a>
-                    <button onclick="document.
-            getElementById('id01').style.display='block'"
-            style="width:auto; font-size: 30px;">Login</button>
-          
+                    <a href="./login/login.php">
+                    <button style="width:auto; font-size: 30px;">Login</button>
+                    </a>
                 </div>
             </div>
     </header>
-<!-- login -->
 
-<!-- sign up -->
 
-<div id="signup" class="modal">
-
-    <form class="modal-content animate"
-    action="insert.php" method="POST">
-    <div class="imgcontainer">
-    <span onclick="document
-    .getElementById('signup')
-    
-    .style.display='none'"
-    class="close" title="Close Modal">
-        &times;</span>
-
-        </div>
-    
-    
-<div class="container">
-      <label><b>First Name</b></label> <br>
-      <input type="text" placeholder=
-      "Enter First Name"
-      name="fname" id="uname" required>
-    <br>
-      <label><b>Last Name</b></label> <br>
-      <input type="text" placeholder=
-      "Enter Last Name"
-      name="lname" required>
-     <br>
-     <label><b>Id No</b></label> <br>
-     <input type="number" placeholder=
-     "Enter Id No"
-     name="idno" required>
-    <br>
-    <label><b>Password </b></label>
-    <br>
-    <input type="password" placeholder=
-    "Enter Password" name="pwd" required>
-    <br>
-    <br>
-  <input type="submit" name="submit" value="submit">    
-    </div>
-     
-     <div class="container"
-     style="background-color:#f1f1f1">
-     <button type="button"
-     onclick="document.getElementById
-     ('signup').style.
-    
-     display='none'" class="cancelbtn">
-     Cancel</button>
-      </div>
-      </form>
-    </div>
     <div class="main">
         <div id="Home" class="Home">
             <div class="tapply hm">
         <h1>How to apply?</h1>
         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque tempora ipsam similique
              reprehenderit consequatur iste commodi eius et dignissimos quos.</p>
-             <button onclick="document.
-             getElementById('id01').style.display='block'"
-             style="width:auto; font-size: 20px;">Login to Apply</button>
+             <a href="./login/login.php">
+             <button style="width:auto; font-size: 20px;">Login to Apply</button>
+                    </a> 
              <!-- <marquee behavior="scroll" direction="left" style="color: orange;">Application Closed. Dates will be announced lator: Application Closed. Dates will be announced lator:</marquee> -->
             </div>
             <div class="benef hm">

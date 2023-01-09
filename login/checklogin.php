@@ -1,9 +1,16 @@
 <head>
-    <link rel="stylesheet" href="checklogin.css">
 </head>
 <?php      
 //user login
-    include('connect.php');  
+$host = "localhost: 3306";  
+$user = "root";  
+$password = '';  
+$db_name = "bursaryapp";  
+  
+$con = mysqli_connect($host, $user, $password, $db_name);  
+if(mysqli_connect_errno()) {  
+    die("Failed to connect with MySQL: ". mysqli_connect_error());  
+}  
     $idno = $_POST['idno'];  
     $password = $_POST['pwd'];  
       
@@ -22,15 +29,14 @@
           //if there is one common idno and pass
         if($count == 1){ 
             echo '<script> alert("Login successful");</script>';
-			header('Location:loggedin.php'); //means that it will trans to that file
+			header('Location:loggedin.php');
 			 
         }  
         else{  
-            echo '<script> 
-            document.getElementById("alert").innerHTML = 
-            alert("Incorrect Id or Password");
-            </script>';  
             include('login.php');
+            echo '<script>
+            document.getElementById("errmsg").innerHTML = "Login failed, Try Again";
+        </script>';   
         }     
 ?>  
 
