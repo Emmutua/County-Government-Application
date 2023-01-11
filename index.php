@@ -36,9 +36,32 @@ body{
     <div class="main">
         <div id="Home" class="Home">
             <div class="tapply hm">
+<br><br><br>
+            <button onclick= show()>
+                show application status
+            </button>
+            <h3 id="applicationstatus" style="color: red;">
+            <script>
+                function show(){
+                    var date = new Date();
+                    var month = date.getUTCMonth();
+                    if(month == 0){
+                        document.getElementById('applicationstatus').innerHTML = "applications opened";
+                    }else{
+                        document.getElementById('applicationstatus').innerHTML = "applications closed";
+                    }
+                    
+                }
+            </script>
+            </h3>
         <h1>How to apply?</h1>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque tempora ipsam similique
-             reprehenderit consequatur iste commodi eius et dignissimos quos.</p>
+        <p>1.First, make sure you fulfill the bursary eligibility requirements <br>
+2.Ensure you have all the information and documentation to complete the application form.<br>
+3.Using the online application platform then; <br>
+(i).create any account by filling the relevant details in the sign up section.<br>
+(ii).after creating any account, click on on the 'login to apply button' to proceed with application.<br>
+(iii).If the login in is succefull,choose on Bursary level of application i.e ,tertiary or secondary school levels.<br>
+(iv).Fill your details on the choosen level of study then click the submit button.</p>
              <a href="./login/login.php">
              <button style="width:auto; font-size: 20px;">Login to Apply</button>
                     </a> 
@@ -46,15 +69,20 @@ body{
             </div>
             <div class="benef hm">
                 <h1>Beneficiaries</h1>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque tempora ipsam similique
-                     reprehenderit consequatur iste commodi eius et dignissimos quos.
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora recusandae veritatis quasi
-                     dolor sequi nemo ratione similique ex corrupti eaque.</p>
+                <p>1.students with special needs.</p>
+                <p>2.students from poor households and  slums.
+</p>
+                <p>3.Students from families with meager incomes
+</p>
+                <p>4.Students  who are total orphans.</p>
             </div>
             <div class="cfab hm">
                 <h1>Creteria for awarding Bursaries</h1>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eaque tempora ipsam similique
-                     reprehenderit consequatur iste commodi eius et dignissimos quos.</p>
+              
+<p>1.Applicants MUST have an admission letter from the Institution.</p> 
+<p>2.They must be from poor background families </p>
+<p>3.To qualify for consideration, applicants must fill all the filelds required online and upload letters of recommendations as requested.</p>
+<p>4.Beneficiaries must be individuals of high moral character.</p>
             </div>
         </div>
         <!-- about us -->

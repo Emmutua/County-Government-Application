@@ -1,45 +1,82 @@
- <script>
-    alert("success");
- </script>
-<?php
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Applications</title>
+    <style>
+        /* Add some styling to the page */
+        h1,p {
+            text-align: center;
+            font-size: 3em;
+            margin-top: 50px;
+        }
+        .container {
+            width: 60%;
+            margin: 0 auto;
+        }
+        /* Style the button */
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+        }
+        /* Style the available money display */
+        .money {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #f2f2f2;
+        }
+        .money p {
+            font-size: 1.5em;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+<button onclick="Applications()"> <h1>Applications</h1>
+</button>
+   
+    <p>No of Applicants: 
+        <?php
+        include('./connect.php');
+        $sql = "select * from app"; 
 
-// Connect to the database
-$host = "localhost: 3306";  
-$user = "root";  
-$password = '';  
-$db_name = "bursaryapp";  
+        $result = mysqli_query($con, $sql);  
+        $row = mysqli_fetch_array($result, MYSQLI_ASSOC);  
 
-$conn = mysqli_connect($host, $user, $password, $db_name);
+        $allocations = mysqli_num_rows($result); 
+        echo $allocations;
+        ?>
+    </p>
+    <a href="./viewApplications.php"><h1>Applicants</h1></a>
+    <div class="container">
+        <div id = "money" class="money">
+            <p>Total Money : Sh<?php
+            include('./connect.php');
+        $sql = "SELECT total FROM bursaryamount WHERE id = 'ba'";
+        $result = mysqli_query($con, $sql);
+        $row = mysqli_fetch_array($result, MYSQLI_ASSOC);  
 
-// Check connection
-if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());
-}
+            $money_before = 1000000; 
+                 echo $money_before;
+            ?></p>
+            <p>Available Money: Sh<?php 
+                $allocated_amount = 10000;
 
-// Select all bursaries that have not yet been allocated
-$sql = "SELECT * FROM tertiary WHERE allocation_status = 'pending'";
-$result = mysqli_query($conn, $sql);
-
-if (mysqli_num_rows($result) > 0) {
-    // Output data for each bursary
-    while($row = mysqli_fetch_assoc($result)) {
-        echo "ID: " . $row["IdNo"]. " - Institution: " . $row["Institution"]. " - Email: " . $row["Email"]. " - Allocation Status: " . $row["allocation_status"]. "<br>";
-        
-        // Display form to update allocation status
-        echo '<form action="update_allocation.php" method="post">';
-        echo '<input type="hidden" name="id" value="'.$row["id"].'">';
-        echo '<label for="allocation_status">Allocation Status:</label>';
-        echo '<select name="allocation_status">';
-        echo '<option value="approved">Approved</option>';
-        echo '<option value="denied">Denied</option>';
-        echo '</select>';
-        echo '<input type="submit" value="Submit">';
-        echo '</form>';
-    }
-} else {
-    echo "No bursaries to allocate.";
-}
-
-mysqli_close($conn);
-
-?>
+                 $money_after = $money_before - ($allocated_amount*$allocations);
+                echo $money_after;
+            ?></p>
+        </div>
+    </div>
+    <script>
+        function Applications() {
+            alert("Loading available applications...");
+        }
+    </script>
+</body>
+</html>
