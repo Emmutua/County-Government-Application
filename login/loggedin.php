@@ -30,7 +30,7 @@
 <a href="./applyBursary.php"><button style="width:auto;">Click to Apply
 </button></a>
 <p id="errmsg" style="color: red;"></p>
-    <h3>Status: <span id="applicationStatus" style="color: red;"></span></h3>
+    <h3><span id="applicationStatus" style="color: red;"></span></h3>
     <!-- <h3>Allocation: <span id="allocationStatus" style="color: red;">Not Yet Applie</span</h3> -->
 </body>
 </html>
